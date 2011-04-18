@@ -1,0 +1,37 @@
+$def with (name)
+<html>
+<title>Регистрация</title>
+
+<style>
+    #repform{
+        /*color:red*/
+    }
+    .test{
+        color:green;
+        margin-left:50px;
+    }
+</style>
+<head>
+</head>
+    <body>
+    <form name="auth" method="get" action="/cdx" id='repform'>
+        <h1> $name</h1>
+            <div class="test" >
+                Логин
+                <br>
+                <input  type="text" name="name" value="" size="30px" />
+                <br>
+                Пароль
+                <br>
+                <input type="password" name="passw" value="" size="30px" />
+                <br>
+                <input  type="submit" value="Вход"/>
+                <br>
+                <br>
+           </div>
+        <a href="/ru" name="ru" title="Новичек"  >Зарегистрируйте меня, я новенький!</a>
+        <br>
+
+    </form>
+</body>
+</html>
