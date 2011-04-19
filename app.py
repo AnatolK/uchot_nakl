@@ -17,7 +17,15 @@ urls = [
     '(.*)/cdx1', 'cdx1',
     '(.*)/reguseradd','reguseradd',
     '(.*)/prexit', 'prexit',
+    '(.*)/sprtovarov', 'sprtovarov',
 ]
+
+class sprtovarov(object):
+    def GET(self): # Окно приглашение к индентификации пользователя.
+        print '2222', 'sprtovar'
+        web.header('Content-type', 'text/html; charset=utf-8')
+        return render.sprtovarov('ntst')
+
 class cdn(object):
     def GET(self): # Окно приглашение к индентификации пользователя.
         print '2222', 'cdx'
@@ -70,7 +78,8 @@ class cdx1(object):
             r = cur.fetchall()
             if r:
                 print r
-                return render.prexit('На этом пока все!')
+                #return render.prexit('На этом пока все!')
+                return render.sprtovarov('ntst')
         else:
             return render.index('Введите свой логин и пароль!')
 
